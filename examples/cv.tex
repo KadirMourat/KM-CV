@@ -1,0 +1,169 @@
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+% KM CV LaTeX Template for CV
+%
+% This class has been downloaded from:
+% https://github.com/KadirMourat/KM-CV
+%
+% Author:
+% Kadir Mourat
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass{../km_cv}
+
+
+% Dummy package
+\usepackage{lipsum}
+
+% Uncomment to change color palette
+% \definecolor{primarycolor}{HTML}{1330A8}%Darkblue
+% \definecolor{secondarycolor}{HTML}{989898}%Darkgrey
+% \definecolor{tertiarycolor}{HTML}{1263D0}%Lightblue
+
+
+% PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\newcommand{\profilepic}{profilepic.png}
+\newcommand{\firstname}{Max}
+\newcommand{\lastname}{Muster}
+\newcommand{\address}{1 East 161st Street, Bronx, NY 10451-2100}
+\newcommand{\birthdate}{July 7th 1995 in Berlin}
+
+% Create a list containing your contact details
+\listadd{\contactlist}{\addphone{+49 1111 2222333}}
+\listadd{\contactlist}{\addemail{maxmuster@googlemail.de}}
+% Create a list containing your public accounts
+\listadd{\publiclist}{\addlinkedin{MaxMusterLi}}
+\listadd{\publiclist}{\addxing{MaxMusterX}}
+\listadd{\publiclist}{\addgithub{MaxMuster1995}}
+
+
+% Document
+%-------------------------------------------------------------------------------
+\begin{document}
+%
+% Make header
+\makeheader
+%
+% Make footer
+\makecvfooter
+%
+% Add some free space
+\vspace*{1cm}
+%
+% Eductation
+%-------------------------------------------------------------------------------
+\section{Education}
+%
+%-------------------------------------------------------------------------------
+\cventry
+    {Doctoral candidate}
+    {Massachusetts Institute of Technology}
+    {Apr. 2015 -- Mar. 2018}%
+\cvitem{Doctor of Philosophy}
+%
+%-------------------------------------------------------------------------------
+\cventry
+    {Student}
+    {Columbia University}
+    {Apr. 2013 -- Mar. 2015}%
+\cvitem{Master of Science}
+%
+%-------------------------------------------------------------------------------
+\cventry
+    {Student}
+    {Columbia University}
+    {Okt. 2010 -- Mar. 2013}%
+\cvitem{Bachelor of Science}
+%
+%
+% Work experience
+%-------------------------------------------------------------------------------
+\section{Work experience}
+%
+%-------------------------------------------------------------------------------
+\cventry
+    {Research Scientist}
+    {Google}
+    {Sep. 2019 -- Today}%
+\cvtext{%
+    \lipsum[4][7-12]
+}
+%
+%-------------------------------------------------------------------------------
+\cventry
+    {Data Scientist}
+    {Facebook}
+    {Apr. 2018 -- Aug. 2019}%
+\cvtext{%
+    \lipsum[7][7-12]
+}
+%
+% Social activities
+%-------------------------------------------------------------------------------
+\section{Social activities}
+%
+%-------------------------------------------------------------------------------
+\cventry
+    {Volunteer firefighter}
+    {New York City Fire Department}
+    {2019 -- Today}
+\cvtext{%
+\lipsum[1][7-12]
+}
+%
+% Skills
+%-------------------------------------------------------------------------------
+\section{Skills}
+%
+% Create skills
+%-------------------------------------------------------------------------------
+\listadd{\skilllistA}{Python}
+\listadd{\skilllistA}{Julia}
+\listadd{\skilllistA}{SQL}
+\addskills{Programming languages}{\skilllistA}
+%
+% Create skills
+%-------------------------------------------------------------------------------
+\listadd{\skilllistB}{Numpy}
+\listadd{\skilllistB}{Tensorflow}
+\listadd{\skilllistB}{Keras}
+\listadd{\skilllistB}{Pytorch}
+\listadd{\skilllistB}{Scikitlearn}
+\addskills{Scientific computing \& ML}{\skilllistB}
+%
+% Create skills
+%-------------------------------------------------------------------------------
+\listadd{\skilllistC}{Jupyter Notebook}
+\listadd{\skilllistC}{Pandas}
+\listadd{\skilllistC}{Matplotlib}
+\listadd{\skilllistC}{Seaborn}
+\addskills{Data analysis \& visualization}{\skilllistC}
+%
+% Create skills
+%-------------------------------------------------------------------------------
+\listadd{\skilllistF}{English, German \emph{(Native)}}
+\listadd{\skilllistF}{French \emph{(Business fluent)}}
+\addskills{Language skills}{\skilllistF}
+%
+% Publications
+%-------------------------------------------------------------------------------
+\section{Publications}
+%
+%-------------------------------------------------------------------------------
+\addpublication
+    {Journal}
+    {Mustermann M., George C. \& Zimmermann T. Something I just thought about. \textit{Journal of the Fantastic Sciences.} (2017). {\href{https://doi.org/10.xxxx/sxxxxx-000-00000-x}{\textcolor{tertiarycolor}{DOI: 10.1007/10.xxxx/sxxxxx-000-00000-x}}}}
+%
+%-------------------------------------------------------------------------------
+\addpublication
+    {Conference}
+    {Mustermann M. \& Zimmermann T. Something I thought about back then. \textit{Journal of the Majestic Sciences.} (2015). {\href{https://doi.org/10.xxxx/sxxxxx-000-00001-x}{\textcolor{tertiarycolor}{DOI: 10.1007/10.xxxx/sxxxxx-000-00001-x}}}}
+%
+\end{document}
