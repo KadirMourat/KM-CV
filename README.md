@@ -4,6 +4,12 @@ KM CV LaTeX template for generating a Curriculum Vitae.
 
 ## Preview
 
+<object data="https://github.com/breucode/KM-CV/blob/generated/cv.pdf?raw=true" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/breucode/KM-CV/blob/generated/cv.pdf?raw=true">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/breucode/KM-CV/blob/generated/cv.pdf?raw=true">Download PDF</a>.</p>
+    </embed>
+</object>
+
 <img src="/examples/cv.png" width="70%" />
 
 ## How to Use
@@ -26,6 +32,6 @@ This should result in the creation of ``{filename}.pdf``.
 
 ## Contact
 
-You are free to use the the code to create your own cv. Please don't use it for commercial purposes though, as it is intended to be shared for free.
+You are free to use the code to create your own cv. Please don't use it for commercial purposes though, as it is intended to be shared for free.
 
 Have fun!
