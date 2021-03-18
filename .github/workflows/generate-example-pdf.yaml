@@ -1,0 +1,41 @@
+name: Generate example
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  generate-example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install poppler-utils
+        run: sudo apt-get install poppler-utils
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: cv.tex
+          working_directory: examples
+      - name: Generate png from pdf
+        run: pdftoppm examples/cv.pdf examples/cv -png -f 1 -singlefile
+      - name: Upload generated example pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: generated-example-files
+          path: examples/cv.p*
+      - name: Checkout generated branch
+        uses: actions/checkout@v2
+        with:
+          ref: generated
+      - uses: actions/download-artifact@v2
+        with:
+          name: generated-example-files
+      - name: Commit and push drawings
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add cv.pdf
+          git add cv.png
+          git commit --amend -m "Generated example pdf"
+          git push --force

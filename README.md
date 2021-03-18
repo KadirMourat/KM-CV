@@ -4,7 +4,9 @@ KM CV LaTeX template for generating a Curriculum Vitae.
 
 ## Preview
 
-<img src="/examples/cv.png" width="70%" />
+<img src="https://github.com/KadirMourat/KM-CV/blob/generated/cv.png?raw=true" width="70%" />
+
+[Preview as pdf](https://github.com/KadirMourat/KM-CV/blob/generated/cv.pdf?raw=true)
 
 ## How to Use
 
@@ -26,6 +28,6 @@ This should result in the creation of ``{filename}.pdf``.
 
 ## Contact
 
-You are free to use the the code to create your own cv. Please don't use it for commercial purposes though, as it is intended to be shared for free.
+You are free to use the code to create your own cv. Please don't use it for commercial purposes though, as it is intended to be shared for free.
 
 Have fun!
