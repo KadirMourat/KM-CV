@@ -4,13 +4,9 @@ KM CV LaTeX template for generating a Curriculum Vitae.
 
 ## Preview
 
-<object data="https://github.com/breucode/KM-CV/blob/generated/cv.pdf?raw=true" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/breucode/KM-CV/blob/generated/cv.pdf?raw=true">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/breucode/KM-CV/blob/generated/cv.pdf?raw=true">Download PDF</a>.</p>
-    </embed>
-</object>
+<img src="https://github.com/breucode/KM-CV/blob/generated/cv.png?raw=true" width="70%" />
 
-<img src="/examples/cv.png" width="70%" />
+[Preview as pdf](https://github.com/breucode/KM-CV/blob/generated/cv.pdf?raw=true)
 
 ## How to Use
 
