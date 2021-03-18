@@ -2,6 +2,10 @@
 
 KM CV LaTeX template for generating a Curriculum Vitae.
 
+## Preview
+
+<img src="/examples/cv.png" width="70%" />
+
 ## How to Use
 
 #### Requirements
