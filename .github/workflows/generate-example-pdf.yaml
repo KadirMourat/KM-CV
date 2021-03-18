@@ -1,0 +1,36 @@
+name: Generate pdfs and svgs
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  generate-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: cv.tex
+          working_directory: examples
+      - name: Upload generated example pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: generated-example-pdf
+          path: examples/cv.pdf
+      - name: Checkout generated branch
+        uses: actions/checkout@v2
+        with:
+          ref: generated
+      - uses: actions/download-artifact@v2
+        with:
+          name: generated-example-pdf
+      - name: Commit and push drawings
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add cv.pdf
+          git commit --amend -m "Generated example pdf"
+          git push --force
