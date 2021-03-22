@@ -101,15 +101,11 @@
 
 % Add a symbol followed by a text
 % Usage: \symbolplustext{<symbol>}{<text>}[<defaultTextColor>]
-\newcommand{\symbolplustext}[3][tertiarycolor]{%
-	{\small\textcolor{#1}{#2}\,#3}
-}
+\newcommand{\symbolplustext}[3][tertiarycolor]{{\small\textcolor{#1}{#2}\,#3}}
 
 %Add a symbol followed by a hyperlink
 % Usage: \symbolpluslink{<symbol>}{<hyperlink>}{<displayedText>}[<defaultTextColor>]
-\newcommand{\symbolpluslink}[4][tertiarycolor]{%
-	{\small\textcolor{#1}{#2}\,\href{#3}{#4}}
-}
+\newcommand{\symbolpluslink}[4][tertiarycolor]{{\small\textcolor{#1}{#2}\,\href{#3}{#4}}}
 
 % Internal command for adding address symbol plus address
 % Usage: \addaddress{<address>}
@@ -129,21 +125,15 @@
 
 %Add Linkedin symbol plus hyperlink
 % Usage: \addlinkedin{<linkedin>}
-\newcommand{\addlinkedin}[1]{%
-	\symbolpluslink{\faLinkedin}{http://www.linkedin.com/in/#1}{#1}
-}
+\newcommand{\addlinkedin}[1]{\symbolpluslink{\faLinkedin}{http://www.linkedin.com/in/#1}{#1}}
 
 %Add Xing symbol plus hyperlink
 % Usage: \addxing{<xing>}
-\newcommand{\addxing}[1]{%
-	\symbolpluslink{\faXing}{https://www.xing.com/profile/#1/cv}{#1}
-}
+\newcommand{\addxing}[1]{\symbolpluslink{\faXing}{https://www.xing.com/profile/#1/cv}{#1}}
 
 %Add Github symbol plus hyperlink
 % Usage: \addgithub{<github>}
-\newcommand{\addgithub}[1]{%
-	\symbolpluslink{\faGithub}{https://github.com/#1}{#1}
-}
+\newcommand{\addgithub}[1]{\symbolpluslink{\faGithub}{https://github.com/#1}{#1}}
 
 
 % Helper commands
@@ -251,8 +241,8 @@
 % Make footer
 % Usage: \makefooter{<leftEntry>}{<centerEntry>}{<rightEntry>}
 \newcommand*{\makecvfooter}[0]{%
-  \fancyfoot{}
-  \fancyfoot[L]{\footerstyle{\today}}
-  \fancyfoot[C]{\footerstyle{\firstname~\lastname}}
-  \fancyfoot[R]{\footerstyle{\thepage}}
+	\fancyfoot{}
+	\fancyfoot[L]{\footerstyle{\today}}
+	\fancyfoot[C]{\footerstyle{\firstname~\lastname}}
+	\fancyfoot[R]{\footerstyle{\thepage}}
 }
